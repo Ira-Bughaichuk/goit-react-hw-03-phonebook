@@ -4,8 +4,6 @@ import ContactForm from './components/ContactForm/ContactForm';
 import ContactList from './components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
 
-
-
 export class App extends Component {
     state = {
        contacts: [
@@ -17,7 +15,7 @@ export class App extends Component {
         filter:'',
     }
 handleAddContact = (newContact) => {
-    if (this.state.contacts.some((contact) => 
+        if (this.state.contacts.some((contact) => 
         contact.name.toLowerCase().trim() ===
         newContact.name.toLowerCase().trim() || contact.number.trim() === newContact.number.trim()
     )) {
